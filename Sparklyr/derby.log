@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Jul 02 23:55:23 BRT 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-017a-6a4a-c573-00000d87ad00 
+on database directory /home/hartbjf/Documentos/Projetos-Jodavid/Estudos com spark/Sparklyr/metastore_db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5ffd2b27 
+Loaded from file:/home/hartbjf/spark-3.1.2-bin-hadoop3.2/jars/derby-10.12.1.1.jar
+java.vendor=Ubuntu
+java.runtime.version=11.0.11+9-Ubuntu-0ubuntu2.20.04
+user.dir=/home/hartbjf/Documentos/Projetos-Jodavid/Estudos com spark/Sparklyr
+os.name=Linux
+os.arch=amd64
+os.version=5.4.0-77-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
