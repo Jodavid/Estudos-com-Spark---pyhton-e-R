@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Sat Jul 03 15:02:13 BRT 2021:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-017a-6d89-03b6-0000079b32b0 
+Tue Jul 06 15:36:45 BRT 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-017a-7d1b-b301-00000dabdf68 
 on database directory /home/hartbjf/Documentos/Projetos-Jodavid/Estudos com spark/Sparklyr/metastore_db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5ffd2b27 
 Loaded from file:/home/hartbjf/spark-3.1.2-bin-hadoop3.2/jars/derby-10.12.1.1.jar
 java.vendor=Ubuntu

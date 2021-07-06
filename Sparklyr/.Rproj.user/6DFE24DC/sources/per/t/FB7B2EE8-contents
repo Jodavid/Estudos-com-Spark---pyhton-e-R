@@ -29,10 +29,10 @@ library(ggplot2)
 #' -----------------------
 #' 2 Fazendo a conexão para o Spark Local
 #' -----------------------
-#sc <- spark_connect(master = "local",
-#                    spark_home = "/home/hartbjf/spark-3.1.2-bin-hadoop3.2/")
-sc <- try_spark_connect(master = "local",
-                        spark_home = "/home/hartbjf/spark-3.1.2-bin-hadoop3.2/")
+sc <- spark_connect(master = "local",
+                   spark_home = "/home/hartbjf/spark-3.1.2-bin-hadoop3.2/")
+# sc <- try_spark_connect(master = "local",
+#                         spark_home = "/home/hartbjf/spark-3.1.2-bin-hadoop3.2/")
 
 #' -----------------------
 #' Lendo arquivos parquet
@@ -103,4 +103,31 @@ ggplot(data = salary, aes(x = salary, y = salary)) +
   geom_violin(trim=FALSE, fill='#A4A4A4', color="darkred")
 #' ------
 
+#' ----------------------------------------------------------------------------
 
+#' ------------------------------------
+#' 3.1 Fazendo um agrupamento e gráfico de barras
+#' ------------------------------------
+total_de_linhas <- sdf_dim(dados)[1]
+#' ---------- 
+result <-
+  dados |> 
+    select(c(gender,salary)) |> 
+    group_by(gender) |> 
+    #summarise( list(n = n()))
+    summarise_all(
+      list(n = ~ n(),
+           mean = ~ mean(.),
+           min = ~ min(.),
+           max = ~ max(.),
+           percent = ~ n() / total_de_linhas
+           )
+      )
+
+result
+#' ----------
+result |> 
+  ggplot(aes(x = gender, y = percent)) +
+  geom_bar(stat = "identity")
+
+  
